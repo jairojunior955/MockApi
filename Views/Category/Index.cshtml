@@ -1,0 +1,14 @@
+@model IEnumerable<MockApi.Models.Category>
+
+<h1>Categories</h1>
+
+<ul>
+    @foreach (var category in Model)
+    {
+        <li>
+            <a href="@Url.Action("Details", "Category", new {id = category.Id})">@category.Name</a>
+        </li>
+    }
+</ul>
+    using Microsoft.AspNetCore.Mvc.Routing;
+

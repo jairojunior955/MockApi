@@ -50,8 +50,5 @@ A aplicação será iniciada e estará acessível em http://localhost:5000.
 ## Contribuindo
 Contribuições são bem-vindas! Por favor, faça um fork do repositório e crie um pull request com suas alterações.
 
-## Licença
-Este projeto está licenciado sob a Licença MIT.
-
 ## Contato
 Para quaisquer dúvidas ou problemas, por favor, abra uma issue no repositório ou entre em contato com o proprietário do repositório.

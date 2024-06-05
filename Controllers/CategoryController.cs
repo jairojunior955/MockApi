@@ -12,6 +12,11 @@ namespace MockApi.Controllers
         {
             _categoryService = categoryService;
         }
+        public async Task<IActionResult> Index()
+        {
+            var categories = await _categoryService.GetAllCategoriesAsync();
+            return View(categories);
+        }
 
         public async Task<IActionResult> Details(string id)
         {

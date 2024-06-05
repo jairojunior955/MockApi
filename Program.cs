@@ -1,6 +1,15 @@
 using MockApi.Services;
+using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
+
+Env.Load();
+
+var apiBaseUrl = Environment.GetEnvironmentVariable("API_BASE_URL");
+if (string.IsNullOrEmpty(apiBaseUrl))
+{
+    throw new InvalidOperationException("API_BASE_URL environment variable is not set.");
+}
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

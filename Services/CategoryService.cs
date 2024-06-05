@@ -20,5 +20,10 @@ namespace MockApi.Services
         {
             return await _httpClient.GetFromJsonAsync<IEnumerable<Category>>(_apiBaseUrl);
         }
+
+        public async Task<Category> GetCategoryByIdAsync(string id)
+        {
+            return await _httpClient.GetFromJsonAsync<Category>(_apiBaseUrl);
+        }
     }   
 }

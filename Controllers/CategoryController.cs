@@ -12,6 +12,7 @@ namespace MockApi.Controllers
         {
             _categoryService = categoryService;
         }
+
         public async Task<IActionResult> Index()
         {
             var categories = await _categoryService.GetAllCategoriesAsync();
@@ -21,11 +22,12 @@ namespace MockApi.Controllers
         public async Task<IActionResult> Details(string id)
         {
             var category = await _categoryService.GetCategoryByIdAsync(id);
-            if (category  ==  null)
+            if (category == null)
             {
                 return NotFound();
             }
             return View(category);
         }
     }
+
 }
